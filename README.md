@@ -17,7 +17,9 @@ O método "montarConsulta()' recebe muitos parâmetros que não são autoexplica
 
 ## 3. Builder: criar um ConsultaBuilder com métodos nomeados e encadeáveis para os parâmetros opcionais (comFiltro, comOrdenacao, comLimite, etc.) e um construir() que devolve a consulta. Substitui o método telescópico.
 
-
+Antes de Builder, "montarConsulta()" recebia muitos parâmetros na mesma chamada. Valores não autoexplicativos que dificultam a leitura e aumentam risco de erros na ordem dos argumentos. 
+Para resolver isso, criamos a classe "ConsultarBuilder". A tabela é obrigatória, então é informada no construtore os parãmetros opcionais são configurados por métodos nomeados e cada método retorna o próprio objeto com "return this" com isso as configurações são encadeadas. 
+Com builder a construção fica mais legível e o método telescópio foi removido.
 
 ## 4. Singleton: transformar o AcessoDados em um Singleton, com construtor privado, instância estática e método de acesso.
 
