@@ -23,6 +23,9 @@ Com builder a construção fica mais legível e o método telescópio foi removi
 
 ## 4. Singleton: transformar o AcessoDados em um Singleton, com construtor privado, instância estática e método de acesso.
 
-
+Antes de Single, qualquer parte do sistema poderia criar diferentes objetos de "AcessoDados" utilizsndo "new AcessoDados()". O que impidia o controle de quantifade de instâncias responsáveis pelo acesso ao banco. 
+Para resolver isso foi criado o atributo estático e privado "INSTANCIA", que armazena o único objeto de "AcessoDados". 
+"getInstancia()" passou a forncecer aceso controlado à instância única
 
 ## 5. Desenhar o diagrama de classes da solução (fábrica de banco, produtos, builder e acesso), evidenciando os três padrões.
+Está na pasta "docs"
